@@ -1,1 +1,31 @@
 /* Place CSS styles here */
+
+body {
+    min-height: 100vh;
+    background-color: #add8e6;
+}
+
+.pink-oct-image {
+    width: 200px;
+    position: absolute;
+}
+
+.star-image {
+    opacity: 0;
+    width: 15px;
+    position: absolute;
+    left: 54%;
+    top: 35%;;
+}
+
+.pink-oct-image-container:hover  .star-image {
+    opacity: 1;
+}
+
+.pink-oct-image-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
