@@ -6,17 +6,34 @@ body {
     color: white;
 }
 
+.pink-oct-title {
+  text-align: center;
+}
 .pink-oct-image {
-    width: 200px;
+    width: 400px;
     position: absolute;
+}
+
+@media (max-width: 475px) {
+  .pink-oct-image {
+    width: 200px;
+  }
 }
 
 .star-image {
     opacity: 0;
-    width: 15px;
     position: absolute;
-    left: 54%;
-    top: 35%;;
+    width: 42px;
+    top: 32%;
+    left: 52%;
+}
+
+@media (max-width: 475px) {
+  .star-image {
+    left: 52%;
+    top: 32%;
+    width: 22px;
+  }
 }
 
 .pink-oct-image-container:hover  .star-image {
@@ -27,10 +44,18 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
 }
 
+@media (max-width: 475px) {
+  .pink-oct-image-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Animations */
 /* Bob from hover.css */
 @keyframes hvr-bob {
   0% {
@@ -43,20 +68,29 @@ body {
     transform: translateY(-14px);
   }
 }
-@-webkit-keyframes hvr-bob-float {
-  100% {
-    transform: translateY(-14px);
-  }
-}
 @keyframes hvr-bob-float {
   100% {
     transform: translateY(-14px);
   }
 }
 
-.floaty {
+/* Transitions */
+.hvr-rotate {
   display: inline-block;
   vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform: rotate(4deg);
+}
+
+.floaty {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 400px;
+  width: 400px;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   animation-name: hvr-bob-float, hvr-bob;
@@ -66,4 +100,11 @@ body {
   animation-iteration-count: 1, infinite;
   animation-fill-mode: forwards;
   animation-direction: normal, alternate;
+}
+
+@media (max-width: 475px) {
+  .floaty {
+    width: 200px;
+    height: 200px;
+  }
 }
