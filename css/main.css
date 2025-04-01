@@ -108,3 +108,73 @@ body {
     height: 200px;
   }
 }
+
+
+@keyframes rotation {
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+
+.cow-moon-wrapper {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.cow-moon-text {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.cow-moon-image-rotate {
+  animation: rotation 5s infinite linear;
+  position: absolute;
+  min-height: 100vh;
+  transform-origin: bottom;
+  transform: rotate(75deg);
+  width: 100%;
+}
+
+.cow-moon-moon {
+  left: 50%;
+  position: absolute;
+  top: 30%;
+}
+
+.star {
+  width: 75px;
+  position: absolute;
+}
+
+.star-1 {
+  top: 15px;
+  left: 12px;
+}
+
+.star-2 {
+  top: 45px;
+  left: 25%;
+}
+
+.star-3 {
+  top: 205px;
+  right: 10%;
+}
+
+.star-4 {
+  top: 55px;
+  right: 12px;
+}
+
+.star-5 {
+  top: 15px;
+  right: 12px;
+}
+
+.star-6 {
+  top: 15px;
+  right: 12px;
+}
